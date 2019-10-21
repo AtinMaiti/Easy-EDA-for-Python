@@ -29,5 +29,5 @@ def easyEdaPrint(dataFrame):
     print('Total number of columns : ' + str(len(dataFrame.columns)))
     for i in dataFrame.columns:
         print('\n Column ' + str(counter) + ' : ' + str(i))
-        easyEDA(train,i)
+        easyEDA(dataFrame,i)
         counter = counter + 1
