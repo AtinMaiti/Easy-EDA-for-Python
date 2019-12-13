@@ -16,11 +16,10 @@ def easyEDA(dataFrame, columnName):
         print('    Type of Data: Unknown dig in to find out')
     
     #Number of unique values
-    print('    Number of uniques values : ' + str(dataFrame[columnName].dtype))
-    
+    print('    Number of uniques values : ' + str(dataFrame[columnName].nunique()))
     
     #Number of Null Values
-    print('    Number of null values : ' + str(dataFrame[columnName].isnull().sum()))
+    print('    Percentage of missing values : ' + str(round(((dataFrame[columnName].isnull().sum()/dataFrame.shape[0])*100),2)) + '%')
     
 
 def easyEdaPrint(dataFrame):
